@@ -1,0 +1,2 @@
+# bacore
+Business Analysis Core
