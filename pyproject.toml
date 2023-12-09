@@ -4,7 +4,7 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = "bacore"
-version = "0.0.1"
+version = "0.0.2"
 description = "Bacore is a library for business analysis and test automation."
 readme = "README.md"
 authors = [
@@ -30,6 +30,11 @@ dependencies = [
 
 [project.optional-dependencies]
 
+build = [
+    "build>=1.0.3",
+    "twine>=4.0.2"
+]
+
 dev = [
     "ipython>=8.18.1",
     "markdown-exec[ansi]>=1.7.0",
@@ -40,9 +45,13 @@ dev = [
 	"mkdocstrings-python>=1.7.5"
 ]
 
-build = [
-    "build>=1.0.3",
-    "twine>=4.0.2"
+test = [
+    "playwright>=1.40.0",
+    "pytest>=7.4.3",
+	"pytest-memray>=1.5.0",
+	"pytest-playwright>=0.4.3",
+	"pytest-testmon>=2.1.0",
+	"pytest-watch>=4.2.0",
 ]
 
 [tool.setuptools]
